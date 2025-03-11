@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+
+:root {
+  --color-primary: #1F4068;
+  --color-secondary: #050621;
+  --color-accent: #0062b9;
+  --bg-primary: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+@layer components {
+  .header {
+    @apply fixed w-full z-50 bg-white shadow-lg;
+  }
+
+  .container {
+    @apply max-w-[120rem] mx-auto w-[92%];
+  }
+
+  .heading-1 {
+    @apply text-6xl font-bold text-center uppercase;
+  }
+
+  .btn {
+    @apply inline-block px-8 py-3 
+           text-white font-bold rounded-lg 
+           bg-[var(--color-primary)]
+           hover:-translate-y-1 
+           transition-transform duration-300;
+  }
+}
